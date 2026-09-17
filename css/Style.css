@@ -109,6 +109,39 @@ header p {
     letter-spacing: 7px;
 }
 
+.button-link {
+    display: inline-block;
+
+    margin: 12px 6px;
+
+    padding: 14px 24px;
+
+    color: #dffaff;
+
+    background: rgba(0, 150, 220, 0.08);
+
+    border: 1px solid #00bfff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.button-link:hover {
+    color: #ffffff;
+
+    background: rgba(0, 190, 255, 0.2);
+
+    box-shadow:
+        0 0 15px rgba(0, 200, 255, 0.4),
+        inset 0 0 15px rgba(0, 200, 255, 0.08);
+
+    transform: translateY(-2px);
+}
 
 /* =========================
    4. MENÚ
