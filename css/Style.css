@@ -1,0 +1,666 @@
+/* =========================================================
+   BAHAMONDES // ANONYMOUS
+   UNKNOWN LABORATORY
+   S.T.A.R. LABS INSPIRED INTERFACE
+   ========================================================= */
+
+
+/* =========================
+   1. CONFIGURACIÓN GENERAL
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% 20%, #102a3f 0%, #050a10 45%, #020407 100%);
+    color: #dff8ff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   2. EFECTO DE CUADRÍCULA
+   ========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(0, 180, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 180, 255, 0.035) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+/* =========================
+   3. ENCABEZADO
+   ========================= */
+
+header {
+    position: relative;
+    text-align: center;
+
+    padding: 70px 20px 45px;
+
+    border-bottom: 1px solid rgba(0, 200, 255, 0.25);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 25, 45, 0.95),
+            rgba(2, 8, 15, 0.7)
+        );
+}
+
+
+/* Pequeña línea tecnológica */
+
+header::before {
+    content: "SYSTEM // BH-019 // ONLINE";
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 11px;
+    letter-spacing: 5px;
+
+    color: #48d9ff;
+}
+
+
+header h1 {
+    font-size: clamp(40px, 8vw, 90px);
+
+    letter-spacing: 12px;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px rgba(0, 210, 255, 0.8),
+        0 0 30px rgba(0, 160, 255, 0.5);
+
+    margin-bottom: 15px;
+}
+
+
+header p {
+    color: #58dfff;
+
+    font-size: 13px;
+
+    letter-spacing: 7px;
+}
+
+
+/* =========================
+   4. MENÚ
+   ========================= */
+
+nav {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding: 18px;
+
+    background: rgba(2, 10, 18, 0.95);
+
+    border-bottom: 1px solid rgba(0, 200, 255, 0.2);
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+nav a {
+    color: #9deaff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    padding: 12px 18px;
+
+    border: 1px solid transparent;
+
+    transition:
+        color 0.3s,
+        border 0.3s,
+        background 0.3s,
+        box-shadow 0.3s;
+}
+
+
+nav a:hover {
+    color: #ffffff;
+
+    border-color: #00cfff;
+
+    background: rgba(0, 180, 255, 0.08);
+
+    box-shadow:
+        0 0 15px rgba(0, 200, 255, 0.2);
+}
+
+
+/* =========================
+   5. CONTENIDO PRINCIPAL
+   ========================= */
+
+main {
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+
+    padding: 70px 0;
+}
+
+
+section {
+    position: relative;
+
+    margin-bottom: 35px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8, 28, 43, 0.92),
+            rgba(3, 10, 17, 0.92)
+        );
+
+    border: 1px solid rgba(0, 200, 255, 0.25);
+
+    box-shadow:
+        0 0 25px rgba(0, 130, 200, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* Línea superior de cada panel */
+
+section::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #00d9ff,
+        transparent
+    );
+}
+
+
+section h2 {
+    color: #ffffff;
+
+    font-size: 23px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 10px rgba(0, 200, 255, 0.35);
+}
+
+
+section h3 {
+    color: #52dcff;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+section p {
+    color: #a9cbd5;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   6. PRESENTACIÓN
+   ========================= */
+
+main > section:first-child {
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+main > section:first-child h2 {
+    font-size: clamp(28px, 5vw, 50px);
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+
+main > section:first-child p {
+    max-width: 650px;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   7. BOTONES
+   ========================= */
+
+button {
+    margin: 12px 6px;
+
+    padding: 14px 24px;
+
+    color: #dffaff;
+
+    background: rgba(0, 150, 220, 0.08);
+
+    border: 1px solid #00bfff;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition:
+        transform 0.2s,
+        background 0.3s,
+        box-shadow 0.3s,
+        color 0.3s;
+}
+
+
+button:hover {
+    color: #ffffff;
+
+    background: rgba(0, 190, 255, 0.2);
+
+    box-shadow:
+        0 0 15px rgba(0, 200, 255, 0.4),
+        inset 0 0 15px rgba(0, 200, 255, 0.08);
+
+    transform: translateY(-2px);
+}
+
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   8. INPUTS
+   ========================= */
+
+input,
+select {
+    width: 100%;
+
+    margin: 10px 0 20px;
+
+    padding: 14px;
+
+    color: #e8fbff;
+
+    background: #050d15;
+
+    border: 1px solid rgba(0, 200, 255, 0.35);
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 15px rgba(0, 200, 255, 0.2);
+}
+
+
+label {
+    display: block;
+
+    color: #5cddff;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   9. BARRAS DE ENERGÍA
+   ========================= */
+
+input[type="range"] {
+    appearance: none;
+
+    height: 5px;
+
+    padding: 0;
+
+    border: none;
+
+    background: #123040;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: #55e5ff;
+
+    box-shadow:
+        0 0 10px #00cfff;
+
+    cursor: pointer;
+}
+
+
+progress {
+    width: 100%;
+
+    height: 18px;
+
+    appearance: none;
+}
+
+
+progress::-webkit-progress-bar {
+    background: #07141d;
+
+    border: 1px solid rgba(0, 200, 255, 0.3);
+}
+
+
+progress::-webkit-progress-value {
+    background: linear-gradient(
+        90deg,
+        #006d91,
+        #00d9ff
+    );
+
+    box-shadow:
+        0 0 12px rgba(0, 220, 255, 0.5);
+}
+
+
+/* =========================
+   10. DATOS DEL SISTEMA
+   ========================= */
+
+strong {
+    color: #62e4ff;
+
+    letter-spacing: 1px;
+}
+
+
+ul {
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+li {
+    padding: 15px;
+
+    background: rgba(0, 150, 220, 0.05);
+
+    border: 1px solid rgba(0, 200, 255, 0.15);
+
+    color: #b9eaf5;
+
+    transition: 0.3s;
+}
+
+
+li:hover {
+    border-color: #00cfff;
+
+    background: rgba(0, 180, 255, 0.1);
+
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   11. ARTÍCULOS / PROYECTOS
+   ========================= */
+
+article {
+    padding: 20px;
+
+    margin-top: 15px;
+
+    border-left: 3px solid #00cfff;
+
+    background: rgba(0, 160, 220, 0.04);
+}
+
+
+article h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   12. FRASE PERSONAL
+   ========================= */
+
+blockquote {
+    margin-top: 20px;
+
+    padding: 25px;
+
+    border-left: 3px solid #00d9ff;
+
+    background: rgba(0, 170, 230, 0.05);
+
+    color: #d8f8ff;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+
+    text-shadow:
+        0 0 8px rgba(0, 200, 255, 0.3);
+}
+
+
+/* =========================
+   13. PIE DE PÁGINA
+   ========================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    border-top: 1px solid rgba(0, 200, 255, 0.2);
+
+    background: #02070c;
+
+    color: #5b8794;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   14. ANIMACIÓN DE ENCENDIDO
+   ========================= */
+
+@keyframes systemBoot {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+header,
+main,
+footer {
+    animation: systemBoot 0.8s ease-out;
+}
+
+
+/* =========================
+   15. EFECTO DE PULSO
+   ========================= */
+
+@keyframes pulseCore {
+
+    0% {
+        box-shadow:
+            0 0 5px rgba(0, 200, 255, 0.15);
+    }
+
+    50% {
+        box-shadow:
+            0 0 25px rgba(0, 200, 255, 0.3);
+    }
+
+    100% {
+        box-shadow:
+            0 0 5px rgba(0, 200, 255, 0.15);
+    }
+
+}
+
+
+section {
+    animation: pulseCore 5s infinite;
+}
+
+
+/* =========================
+   16. RESPONSIVE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 50px 15px 35px;
+    }
+
+    header h1 {
+        letter-spacing: 5px;
+    }
+
+    header p {
+        letter-spacing: 3px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    main {
+        width: 94%;
+
+        padding: 40px 0;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+}

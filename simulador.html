@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simulador - S.T.A.R. Labs</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>S.T.A.R. LABS</h1>
+        <p>SIMULADOR DE LA FUERZA DE LA VELOCIDAD</p>
+    </header>
+
+
+    <!-- MENÚ -->
+    <nav>
+        <a href="Laboratorio S.T.A.R/index.html">Inicio</a>
+        <a href="metahumano.html">Metahumanos</a>
+        <a href="laboratorio.html">Laboratorio</a>
+        <a href="simulador.html">Simulador</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+    </nav>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PRESENTACIÓN -->
+        <section>
+
+            <h2>Speed Force Simulator</h2>
+
+            <p>
+                Sistema experimental diseñado para analizar
+                velocidad, distancia, tiempo y energía.
+            </p>
+
+        </section>
+
+
+        <!-- CONFIGURACIÓN -->
+        <section>
+
+            <h2>Configuración de la simulación</h2>
+
+            <!-- VELOCIDAD -->
+            <div>
+
+                <label for="velocidad">
+                    Velocidad:
+                </label>
+
+                <input
+                    type="number"
+                    id="velocidad"
+                    min="1"
+                    value="100">
+
+                <span>km/h</span>
+
+            </div>
+
+
+            <!-- DISTANCIA -->
+            <div>
+
+                <label for="distancia">
+                    Distancia:
+                </label>
+
+                <input
+                    type="number"
+                    id="distancia"
+                    min="1"
+                    value="10">
+
+                <span>km</span>
+
+            </div>
+
+
+            <!-- NIVEL DE ENERGÍA -->
+            <div>
+
+                <label for="energia-simulacion">
+                    Energía disponible:
+                </label>
+
+                <input
+                    type="range"
+                    id="energia-simulacion"
+                    min="0"
+                    max="100"
+                    value="75">
+
+                <p>
+                    Nivel:
+                    <span id="valor-energia">75</span>%
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PANEL DE VELOCIDAD -->
+        <section>
+
+            <h2>Lectura de velocidad</h2>
+
+            <p>
+                Velocidad actual:
+                <strong>0 km/h</strong>
+            </p>
+
+            <p>
+                Velocidad máxima:
+                <strong>0 km/h</strong>
+            </p>
+
+        </section>
+
+
+        <!-- PANEL DE TIEMPO -->
+        <section>
+
+            <h2>Estimación temporal</h2>
+
+            <p>
+                Tiempo estimado:
+                <strong>0 segundos</strong>
+            </p>
+
+            <p>
+                Distancia recorrida:
+                <strong>0 km</strong>
+            </p>
+
+        </section>
+
+
+        <!-- BARRA DE ENERGÍA -->
+        <section>
+
+            <h2>Nivel de energía</h2>
+
+            <progress
+                id="barra-energia"
+                value="75"
+                max="100">
+            </progress>
+
+            <p>
+                Energía del sistema: 75%
+            </p>
+
+        </section>
+
+
+        <!-- CONTROLES -->
+        <section>
+
+            <h2>Control del simulador</h2>
+
+            <button>
+                INICIAR SIMULACIÓN
+            </button>
+
+            <button>
+                DETENER
+            </button>
+
+            <button>
+                REINICIAR
+            </button>
+
+        </section>
+
+
+        <!-- ESTADO -->
+        <section>
+
+            <h2>Estado del sistema</h2>
+
+            <p>
+                Estado:
+                <strong>LISTO</strong>
+            </p>
+
+            <p>
+                Fuerza de la Velocidad:
+                <strong>DESCONECTADA</strong>
+            </p>
+
+            <p>
+                Sistema de seguridad:
+                <strong>ACTIVO</strong>
+            </p>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+        <section>
+
+            <h2>Resultados de la simulación</h2>
+
+            <p>
+                No hay ninguna simulación ejecutándose.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            S.T.A.R. Labs — Speed Force Research Division
+        </p>
+
+    </footer>
+</body>
+
+</html>

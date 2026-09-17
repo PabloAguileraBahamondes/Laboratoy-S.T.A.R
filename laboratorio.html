@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laboratorio - S.T.A.R. Labs</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>S.T.A.R. LABS</h1>
+        <p>LABORATORIO DE INVESTIGACIÓN</p>
+    </header>
+
+
+    <!-- MENÚ -->
+    <nav>
+        <a href="Laboratorio S.T.A.R/index.html">Inicio</a>
+        <a href="metahumano.html">Metahumanos</a>
+        <a href="laboratorio.html">Laboratorio</a>
+        <a href="simulador.html">Simulador</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+    </nav>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PANEL DE EXPERIMENTOS -->
+        <section>
+
+            <h2>Panel de Experimentos</h2>
+
+            <p>
+                Sistema de control y supervisión de experimentos
+                científicos de S.T.A.R. Labs.
+            </p>
+
+        </section>
+
+
+        <!-- SELECCIÓN DEL EXPERIMENTO -->
+        <section>
+
+            <h2>Experimento</h2>
+
+            <label for="experimento">
+                Seleccionar experimento:
+            </label>
+
+            <select id="experimento">
+
+                <option value="energia">
+                    Análisis de energía
+                </option>
+
+                <option value="velocidad">
+                    Medición de velocidad
+                </option>
+
+                <option value="materia">
+                    Análisis de materia
+                </option>
+
+                <option value="metahumano">
+                    Análisis metahumano
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- FUENTE DE ENERGÍA -->
+        <section>
+
+            <h2>Fuente de energía</h2>
+
+            <label for="energia">
+                Nivel de energía:
+            </label>
+
+            <input
+                type="range"
+                id="energia"
+                min="0"
+                max="100"
+                value="50">
+
+            <p>
+                Potencia: <span id="nivel-energia">50</span>%
+            </p>
+
+        </section>
+
+
+        <!-- DURACIÓN -->
+        <section>
+
+            <h2>Duración del experimento</h2>
+
+            <label for="duracion">
+                Duración:
+            </label>
+
+            <input
+                type="number"
+                id="duracion"
+                min="1"
+                max="60"
+                value="10">
+
+            <span>segundos</span>
+
+        </section>
+
+
+        <!-- CONTROLES -->
+        <section>
+
+            <h2>Control del experimento</h2>
+
+            <button>
+                INICIAR EXPERIMENTO
+            </button>
+
+            <button>
+                DETENER
+            </button>
+
+            <button>
+                REINICIAR
+            </button>
+
+        </section>
+
+
+        <!-- ESTADO DEL EXPERIMENTO -->
+        <section>
+
+            <h2>Estado del sistema</h2>
+
+            <p>
+                Estado:
+                <strong>LISTO</strong>
+            </p>
+
+            <p>
+                Sistema de seguridad:
+                <strong>ACTIVO</strong>
+            </p>
+
+            <p>
+                Cámara experimental:
+                <strong>DISPONIBLE</strong>
+            </p>
+
+        </section>
+
+
+        <!-- RESULTADOS -->
+        <section>
+
+            <h2>Resultados</h2>
+
+            <p>
+                No hay ningún experimento ejecutándose.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>S.T.A.R. Labs — Experimental Research Division</p>
+    </footer>
+</body>
+
+</html>
